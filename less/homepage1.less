@@ -1,0 +1,56 @@
+// ------------------------------------------------------------------------------------------------------------
+// Homepage 1
+// Big full screen image background with baseline, no slider
+
+body.homepage1 {
+	.page-heading-wrapper {
+		padding: 70px 0;
+		.box-shadow(inset 0 0 110px rgba(0, 0, 0, .3));
+
+		.page-heading {
+			h1 {
+				.at2x('@{imgDir}/quote-bg-top.png', 1140px, 70px);
+				background-position: center top;
+				background-repeat: no-repeat;
+			}
+
+			h1:after {
+				position: relative;
+				display: block;
+				.at2x('@{imgDir}/quote-bg-bottom.png', 850px, 12px);
+				background-position: center top;
+        		background-repeat: no-repeat;
+				margin-top: 0.4em;
+				content: '';
+				height: 12px;
+			}
+		} // .we-are
+	} // .we-are-wrapper
+
+	.features-wrapper {
+		position: relative;
+		background-color: #fff;
+		margin-bottom: 30px;
+
+		// Waves pattern top
+		// -----------------
+		&:before,
+		&:after {
+			position: absolute;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 2px;
+			top: -2px;
+			background-color: #fff;
+			.mask('@{imgDir}/footer-pattern-mask.png');
+		}
+
+		// Waves pattern bottom
+		&:after {
+			.mask('@{imgDir}/footer-pattern-mask-bottom.png');
+			top: auto;
+			bottom: -2px;
+		}
+	} // .features-wrapper
+}

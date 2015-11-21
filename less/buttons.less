@@ -1,0 +1,224 @@
+// ----------------------------------------
+//      Buttons
+
+// Default
+// ---------------------------------------
+.btn {
+    position: relative;
+    .inline-block();
+    background-color: @btnBgColor;
+    color: @btnTextColor;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+    font-size: 1em;
+    font-weight: 300;
+    font-style: italic;
+    padding: 7px 24px;
+    @transitions: box-shadow .2s ease-out,
+                  top .2s ease-out,
+                  left .2s ease-out,
+                  background-color .2s ease-in;
+    .transition(@transitions);
+
+    // Btn small
+    // ------------------
+    &.small {
+        font-size: 0.750em;
+        padding: 2px 14px;   
+    }
+
+    // Btn large
+    // ------------------
+    &.large {
+        font-size: 1.250em;
+        padding: 9px 28px;   
+    }
+
+    // Btn shaded
+    // ------------------
+    &.shaded {
+        .block-styled(@btnBgColor, @btnShadowColor, 3px);
+        top: -2px;
+        left: -2px;
+        
+        &:active {
+            .box-shadow(1px 1px 0 @btnShadowColor);
+            top: 0;
+            left: 0;
+        }
+    }
+
+    // hover
+    // ------------------
+    &.disabled,
+    &[disabled],
+    &.disabled:hover,
+    &[disabled]:hover,
+    &:hover,
+    &.shaded:hover,
+    &.small:hover,
+    &.large:hover {
+        background-color: @btnBgHoverColor;
+        color: @btnTextHoverColor;
+    }
+
+    // active
+    // ------------------
+    &:active,
+    &.small:active,
+    &.large:active,
+    &.shaded:active {
+        background-color: @btnBgActiveColor;
+        .transition(none);
+    }
+} // .btn
+
+// Alternative buttons
+// ---------------------------------------
+
+// btn 2
+// -------------------------
+.btn.btn2 {
+    color: @btn2TextColor;
+    background-color: @btn2BgColor;
+
+    &.shaded {
+        .block-styled(@btn2BgColor, @btn2ShadowColor, 3px);
+
+        &:active {
+            .box-shadow(1px 1px 0 @btn2ShadowColor);
+        }
+    }
+
+    // Hover
+    // ------------------
+    &.disabled,
+    &[disabled],
+    &.disabled:hover,
+    &[disabled]:hover,
+    &:hover,
+    &.shaded:hover,
+    &.small:hover,
+    &.large:hover {
+        color: @btn2TextHoverColor;
+        background-color: @btn2BgHoverColor;
+    }
+
+    // active
+    // ------------------
+    &:active,
+    &.small:active,
+    &.large:active {
+        background-color: @btn2BgActiveColor;
+    }
+} // .btn.btn2
+
+// btn 3
+// -------------------------
+.btn.btn3 {
+    color: @btn3TextColor;
+    background-color: @btn3BgColor;
+
+    &.shaded {
+        .block-styled(@btn3BgColor, @btn3ShadowColor, 3px);
+
+        &:active {
+            .box-shadow(1px 1px 0 @btn3ShadowColor);
+        }
+    }
+
+    // Hover
+    // ------------------
+    &.disabled,
+    &[disabled],
+    &.disabled:hover,
+    &[disabled]:hover,
+    &:hover,
+    &.shaded:hover,
+    &.small:hover,
+    &.large:hover {
+        color: @btn3TextHoverColor;
+        background-color: @btn3BgHoverColor;
+    }
+
+    // active
+    // ------------------
+    &:active,
+    &.small:active,
+    &.large:active {
+        background-color: @btn3BgActiveColor;
+    }
+} // .btn.btn3
+
+// btn 4
+// -------------------------
+.btn.btn4 {
+    color: @btn4TextColor;
+    background-color: @btn4BgColor;
+
+    &.shaded {
+        .block-styled(@btn4BgColor, @btn4ShadowColor, 3px);
+
+        &:active {
+            .box-shadow(1px 1px 0 @btn4ShadowColor);
+        }
+    }
+
+    // Hover
+    // ------------------
+    &.disabled,
+    &[disabled],
+    &.disabled:hover,
+    &[disabled]:hover,
+    &:hover,
+    &.shaded:hover,
+    &.small:hover,
+    &.large:hover {
+        color: @btn4TextHoverColor;
+        background-color: @btn4BgHoverColor;
+    }
+
+    // active
+    // ------------------
+    &:active,
+    &.small:active,
+    &.large:active {
+        background-color: @btn4BgActiveColor;
+    }
+} // .btn.btn4
+
+// btn 5
+// -------------------------
+.btn.btn5 {
+    color: @btn5TextColor;
+    background-color: @btn5BgColor;
+
+    &.shaded {
+        .block-styled(@btn5BgColor, @btn5ShadowColor, 3px);
+
+        &:active {
+            .box-shadow(1px 1px 0 @btn5ShadowColor);
+        }
+    }
+
+    // Hover
+    // ------------------
+    &.disabled,
+    &[disabled],
+    &.disabled:hover,
+    &[disabled]:hover,
+    &:hover,
+    &.shaded:hover,
+    &.small:hover,
+    &.large:hover {
+        color: @btn5TextHoverColor;
+        background-color: @btn5BgHoverColor;
+    }
+
+    // active
+    // ------------------
+    &:active,
+    &.small:active,
+    &.large:active {
+        background-color: @btn5BgActiveColor;
+    }
+} // .btn.btn5

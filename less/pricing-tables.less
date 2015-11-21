@@ -1,0 +1,140 @@
+// ----------------------------------------
+//      Pricing tables
+
+.pricing-wrapper {
+    margin: 40px 0;
+    .clearfix();
+}
+
+.pricing-table {
+    .border-radius(3px);
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+
+    .pricing-header,
+    .pricing-rate,
+    .pricing-footer {
+        padding: 20px 10px;
+    }
+
+    .pricing-header {
+        .border-radius(3px 3px 0 0);
+        background-color: #fafafa;
+        border-bottom: 1px solid #e5e5e5;
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 300;
+            font-style: normal;
+            color: @mainColor;
+            margin: 0;
+        }
+    }
+
+    .pricing-rate {
+        .price {
+            font-size: 3em;
+            line-height: 1.250em;
+            font-weight: 300;
+
+            small {
+                font-size: .3em;
+                display: inline;
+            }
+        }
+
+        small {
+            font-size: .7em;
+            line-height: 1em;
+            font-weight: 300;
+            color: #999;
+            display: block;
+        }
+    }
+
+    .pricing-features {
+        li {
+            padding: 8px 10px;
+            font-size: .813em;
+        }
+
+        li:nth-child(odd),
+        li.odd {
+            background-color: #fafafa;
+        }
+    }
+
+    .pricing-footer {
+        padding: 10px 0 30px;
+    }
+}
+
+// Dark pricing table
+.pricing-table.dark {
+    background-color: #3f3f3f;
+    border-color: #222;
+    color: #ccc;
+
+    .pricing-header {
+        background-color: #333;
+        border-color: #222;
+
+        h2 {
+            color: lighten(@blueLight, 10%);
+        }
+    }
+
+    .pricing-rate {
+        .price {
+            color: #fafafa;
+        }
+    }
+
+    .pricing-features {
+        li {
+            font-weight: 300;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+
+        li:nth-child(odd),
+        li.odd {
+            background-color: #333;
+        }
+    }
+}
+
+// Pricing Grid
+// ----------------------------------
+.pricing-table {
+
+    // Two pricing columns
+    &.pricing2 { .pricing-grid(940px, 2); }
+    // Three pricing columns
+    &.pricing3 { .pricing-grid(940px, 3); }
+    // Four pricing columns
+    &.pricing4 { .pricing-grid(940px, 4); }
+    // Five pricing columns
+    &.pricing5 { .pricing-grid(940px, 5); }
+    // Six pricing columns
+    &.pricing6 { .pricing-grid(940px, 6); }
+}
+
+// Popular pricing table
+.pricing-table.popular {
+    .box-shadow(0 1px 7px rgba(0,0,0,.3));
+
+    .pricing-footer {
+        padding: 30px 0 50px;
+    }
+
+    &.pricing2 { .pricing-grid-popular(940px, 2, 40px); }
+    &.pricing3 { .pricing-grid-popular(940px, 3, 40px); }
+    &.pricing4 { .pricing-grid-popular(940px, 4, 40px); }
+    &.pricing5 { .pricing-grid-popular(940px, 5, 40px); }
+    &.pricing6 { .pricing-grid-popular(940px, 6, 40px); }
+}

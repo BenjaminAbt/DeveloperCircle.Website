@@ -1,0 +1,125 @@
+// ------------------------------------------------------------------------------------------------------------
+// Team page 2
+// Rounded avatar with description aside
+//
+// This template might be better if you are a 1 to 4 peoples company
+
+.team2 {
+    // --------------------------
+    // Header
+    .header-wrapper {
+        border-color: @headerBorderColorLight;
+    }
+
+    .page-heading-wrapper {
+        background: url('@{office}') center center no-repeat;
+        background-size: cover;
+    }
+		
+	.teammate {
+		blockquote {
+
+			// Reset small position
+			small {
+				position: relative;
+				bottom: auto;
+				right: auto;
+				display: inline;
+			}
+
+			p {
+				font-size: .888em;
+				font-weight: 500;
+			}
+
+			strong {
+				margin-top: 12px;
+				color: @blue;
+				font-weight: 500;
+			}
+
+			.infos {
+				position: relative;
+				display: block;
+				margin: 6px -6px -6px;
+				padding: 10px 20px;
+				.clearfix();
+
+				img {
+					.border-radius(50%);
+					position: relative;
+					float: left;
+					width: 80px;
+					height: 80px;
+					margin-right: 10px;
+				}
+
+				figcaption {
+					span {
+						font-size: 0.912em;
+						font-style: italic;
+						color: @blue;
+						font-weight: 400;
+					}
+
+					span + span {
+						color: @gray;
+						font-size: 0.750em;
+						line-height: 1em;
+					}
+				}
+			}
+		}
+
+		.social {
+			position: relative;
+			display: block;
+			margin: 5px 0 0;
+
+			li {
+				position: relative;
+				float: left;
+				display: block;
+				margin-right: 5px;
+				margin-bottom: 5px;
+
+				a {
+					.border-radius(50%);
+					display: block;
+                    background-color: #fff;
+                    width: 30px;
+                    height: 28px;
+                    padding-top: 2px;
+                    text-align: center;
+					font-size: 1em;
+					color: @textColor;
+
+					&:hover {
+						background-color: @blue;
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		&.woman {
+			blockquote {
+				.infos {
+					figcaption span {
+						color: @pink;
+
+						+ span {
+							color: @gray;
+						}
+					}
+				}
+			}
+
+			.social {
+				li a:hover {
+					background-color: @pink;
+				}
+			}
+		}
+	}
+}

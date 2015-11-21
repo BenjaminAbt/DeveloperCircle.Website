@@ -1,0 +1,222 @@
+// ------------------------------------------------------------------------------------------------------------
+// Homepage 2
+// Big background full screen slider 
+//
+// This template is better if your pictures/screenshots are more than 1024px wide
+
+body.homepage2 {
+
+	// Slider progress
+	// ---------------------------------------
+	.slider-progress {
+		top: 100px;
+		height: 2px;
+	}
+
+	// --------------------------
+	// Responsive slider
+	.rslides-wrapper {
+		position: relative;
+		//border-bottom: 3px solid #222;
+
+		// Project Desc
+		// ---------------------------------------
+		.project-desc {
+		    height: auto;
+		    top: auto;
+		    bottom: 0;
+		    left: 50%;
+		    margin-left: -470px;
+		    padding: 30px 0 40px;
+		    width: 360px;
+		    background: #222;
+		    .box-shadow(0 0 5px rgba(0,0,0,.3));
+
+		    span {
+		        font-size: 1.1em;
+		        margin-top: 0;
+		    }
+
+		    span + span {
+		        font-size: 0.813em;
+		    }
+		}
+
+		.rslides {
+			position: relative;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			.clearfix();
+
+			li {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
+
+			li:first-child {
+				position: relative;
+				display: block;
+				float: left;
+			}
+
+			img {
+				display: block;
+				height: auto;
+				float: left;
+				width: 100%;
+				border: 0;
+			}
+
+			li a:hover > .project-desc.big {
+				//.opacity(100);
+			}
+		}
+
+		.rslides_tabs {
+			.make-container(940px);
+			position: relative;
+			text-align: right;
+			z-index: 10;
+			height: 0;
+
+			li {
+				position: relative;
+				.inline-block();
+				margin: 0;
+				width: 35px;
+				height: 35px;
+
+				a {
+					position: absolute;
+					top: -34px;
+					display: block;
+					padding: 8px 14px;
+					color: #fff;
+					font-size: 0.750em;
+					font-weight: 400;
+					.transition(all .12s ease-in-out);
+
+					&:hover {
+						color: #222;
+						background-color: #fff;
+					}
+				}
+			}
+
+			// active
+			li.rslides_here {
+				a {
+					color: #fff;
+					background-color: #222;
+				}
+			}
+		}
+	}
+
+	.we-are-wrapper {
+		position: relative;
+		background-color: #fff;
+		padding: 10px 0 40px;
+		z-index: 10;
+		.clearfix();
+
+		// Waves pattern top
+		// -----------------
+		&:before,
+		&:after {
+			position: absolute;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 2px;
+			top: -2px;
+			background-color: #fff;
+			.mask('@{imgDir}/footer-pattern-mask.png');
+		}
+
+		// Waves pattern bottom
+		&:after {
+			.mask('@{imgDir}/footer-pattern-mask-bottom.png');
+			top: auto;
+			bottom: -2px;
+		}
+
+		.container {
+			position: relative;
+			z-index: 10;
+		}
+
+		.we-are {
+			position: relative;
+			text-align: center;
+			z-index: 10;
+			
+			h1 {
+				font-size: 3.275em;
+				line-height: 1.2em;
+				font-weight: 300;
+				font-style: italic;
+				color: #3f3f3f;
+				margin-bottom: 0.500em;
+
+				.keywords {
+					margin: 0;
+					display: inline-block;
+					vertical-align: top;
+        			.backface-visibility(hidden);
+
+					> span {
+						display: none;
+					}
+
+					> span:first-child {
+						display: block;
+					}
+				}
+
+				strong,
+				.keywords > span {
+					font-weight: 600;
+					white-space: nowrap;
+				}
+			}
+		}
+	} // .we-are-wrapper
+
+	.features-wrapper {
+		position: relative;
+		padding: 50px 0 0;
+
+		.features {
+			.title {
+				color: #999;
+			}
+
+			li {
+				a {
+					margin: 0;
+
+					&:hover {
+						background: none;
+					}
+				}
+
+				.icon-rounded,
+				.title strong {
+					.transition(all .2s ease);
+				}
+
+				a:hover > .icon-rounded {
+					background-color: darken(@blue, 5%);
+				}
+
+				a:hover > .title strong {
+					color: darken(@blue, 5%);
+				}
+			}
+		}
+	} // .features-wrapper
+}

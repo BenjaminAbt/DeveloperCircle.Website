@@ -1,0 +1,89 @@
+// ----------------------------------------
+// 		Project
+.project {
+    // --------------------------
+    // Header
+    .header-wrapper {
+        //border-color: @headerBorderColorLight;
+    }
+
+    .page-heading-wrapper {
+        position: relative;
+        background: none;
+        overflow: visible;
+        .clearfix();
+
+        // Waves pattern top
+        // -----------------
+        &:after {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 2px;
+            bottom: 0px;
+            .at2x(@bodyTextureBg, @bodyTextureBgWidth, @bodyTextureBgHeight);
+            .mask('@{imgDir}/footer-pattern-mask.png');
+            z-index: 12;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// Menu nav between projects
+.square.project-nav {
+    position: relative;
+    margin-top: -38px;
+}
+
+.project-description {
+    font-size: .913em;
+    margin-bottom: 2em;
+}
+
+.project-footer {
+    border-bottom: 1px solid @borderGrayLight;
+    padding-bottom: 2px;
+    .clearfix();
+
+    > a,
+    .dropdown > a {
+        font-size: .750em;
+        font-weight: 300;
+        font-style: italic;        
+        color: @gray;
+        margin-left: 10px;
+
+        [class^="easycons-"],
+        [class*=" easycons-"] {
+            font-size: 1.2em;
+        }
+
+        &:hover {
+            color: @textColor;
+        }
+
+        &.url {
+            float: right;
+            color: @linkColor;
+            font-size: .888em;
+            margin-top: 2px;
+
+            &:hover {
+                color: @linkColorHover;
+            }
+        }
+    }
+}
+
+.gallery {
+    margin-top: 50px;
+
+    li {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}

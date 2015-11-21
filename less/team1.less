@@ -1,0 +1,241 @@
+// ------------------------------------------------------------------------------------------------------------
+// Team page 1
+// Big rounded avatar & hidden description
+//
+// This template might be better if you are a 3 to 9 peoples company
+
+.team1 {
+    // --------------------------
+    // Header
+    .header-wrapper {
+        border-color: @headerBorderColorLight;
+    }
+
+    .page-heading-wrapper {
+        background: url('@{office}') center center no-repeat;
+        background-size: cover;
+    }
+
+    .teammate {
+        position: relative;
+        display: block;
+        margin-bottom: 50px;
+
+        .avatar {
+            .border-radius(50%);
+            position: relative;
+            border: 3px solid #fff;
+            width: 192px;
+            width: 192px;
+            .center-block();
+            .box-shadow(0 0 3px rgba(0,0,0,.4));
+            .transition(border .2s ease-in);
+
+            img {
+                .border-radius(50%);
+                position: relative;
+                display: block;
+                width: 100%
+            }
+
+            .social {
+                position: absolute;
+                margin: 0;
+                top: 50%;
+                left: 0;
+                margin-top: -15px;
+                width: 100%;
+                text-align: center;
+                .transition(all .2s ease);
+
+                li {
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    right: 50%;
+                    margin-right: -15px;
+                    .transition(all .2s ease);
+
+                    a {
+                        .border-radius(50%);
+                        display: block;
+                        background-color: #fff;
+                        width: 30px;
+                        height: 28px;
+                        padding-top: 2px;
+                        text-align: center;
+                        margin-bottom: 5px;
+                        color: @textColor;
+                        .box-shadow(0 0 3px rgba(0,0,0,.3));
+
+                        &:hover {
+                            background-color: @blue;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .desc {
+            position: relative;
+            background-color: #fff;
+            .box-shadow(3px 3px 0 darken(#fff, 15%));
+            padding: 12px 20px;
+            margin-top: 22px;
+
+            .name, .job {
+                line-height: 1.4em;
+                font-style: italic;
+                font-weight: 600;
+                color: @blue;
+                display: block;
+            }
+
+            .job {
+                color: @gray;
+                font-size: 0.750em;
+                font-weight: 300;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 0.813em;
+                line-height: 1.350em;
+                // font-weight: 300;
+                font-style: italic;
+            }
+
+            .lifestyle {
+                margin: 0 -20px 20px;
+                padding: 0 20px;
+                .clearfix();
+
+                li {
+                    margin-bottom: 1px;
+                    padding: 7px 14px 7px 12px;
+                    font-size: 0.750em;
+                    line-height: 1.5em;
+                    font-weight: 600;
+                    font-style: italic;
+                    color: darken(@textColor, 10%);
+                    // background-color: #fafafa;
+                    border-left: 1px solid #ddd;
+                    display: inline-block;
+                    float: left;
+                    clear: both;
+                    cursor: default;
+
+                    [class^="easycons-"],
+                    [class*=" easycons-"] {
+                        font-size: 1.2em;
+                        margin-right: 6px;
+                        color: lighten(@textColor, 10%);
+                    }
+
+                    small {
+                        color: @gray;
+                    }
+                }
+            }
+
+            // caret
+            &:before {
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                margin-left: -10px;
+                content: '';
+                height: 0;
+                width: 0;
+                border-top: 22px solid #fff;
+                border-right: 22px solid transparent;
+                .rotate(45deg);
+                .box-shadow(-1px -1px 2px rgba(0,0,0,.1));
+            }
+        }
+
+        &:hover > .avatar {
+            border-color: @blue;
+        }
+
+        &:hover > .desc .lifestyle li {
+            border-color: @blueLight;
+            background-color: #fafafa;
+
+            [class^="easycons-"],
+            [class*=" easycons-"] {
+                color: desaturate(@blue, 10%);
+            }            
+        }
+
+        // Woman block
+        &.woman {
+            .name {
+                color: @pink;
+            }
+
+            .avatar {
+                border-color: #fff;
+
+                .social li a:hover {
+                    background-color: @pink;
+                    color: #fff;
+                }
+            }
+
+            &:hover > .avatar {
+                border-color: @pink;
+            }
+
+            &:hover > .desc .lifestyle li {
+                border-color: @pink;
+
+                [class^="easycons-"],
+                [class*=" easycons-"] {
+                    color: desaturate(@pink, 10%);
+                }            
+            }            
+        }
+
+        // Hover social icons effect
+        &:hover > .avatar .social {
+            li {
+                margin-right: 0;
+                top: -40px;
+                right: -8px;
+                opacity :1;                
+            }
+
+            li + li {
+                top: 0;
+                right: -16px;
+            }
+
+            li + li + li {
+                top: 40px;
+                right: -8px;
+            }             
+
+            li + li + li + li {
+                top: 72px;
+                right: 16px;
+            }           
+
+            li + li + li + li + li {
+                top: 92px;
+                right: 52px;
+            }           
+
+            li + li + li + li + li + li {
+                top: 95px;
+                right: 95px;
+            }       
+
+            li + li + li + li + li + li + li {
+                top: 82px;
+                right: 135px;
+            }                
+        }        
+    } // .teammate
+}

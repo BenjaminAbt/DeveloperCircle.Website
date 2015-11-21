@@ -1,0 +1,79 @@
+// ----------------------------------------
+// 		Accordion
+
+.accordion {
+    .accordion-group {
+        position: relative;
+        background-color: @accordionGroupBgColor;
+        margin-bottom: 1px;
+
+        .accordion-toggle {
+            position: relative;
+            cursor: default;
+            display: block;
+            font-size: .875em;
+            font-style: italic;
+            font-weight: 600;
+            color: @accordionToggleTextColor;
+            background-color: @accordionToggleBgActiveColor;
+            padding: 10px 30px 10px 20px;
+            border-left: 2px solid @accordionBorderActiveColor;
+            .transition(all .2s ease-out);
+
+            &:after,
+            .easycons-arrow-down,
+            .easycons-plus-rounded {
+                .easycons();
+                position: absolute;
+                display: block;
+                top: 12px;
+                right: 12px;
+                content: '\002E';
+                color: @accordionIconActiveColor;
+                font-size: 1.2em;
+                z-index: 10;
+            }       
+
+            &.collapsed {
+                background-color: @accordionToggleBgColor;
+                color: @accordionToggleTextColor;
+                border-color: @accordionBorderColor;
+
+                &:after,
+                .easycons-plus-rounded,
+                .easycons-arrow-down {
+                    content: '\002C';
+                    color: @accordionIconColor;
+                }
+
+                &:hover {
+                    background-color: @accordionToggleBgHoverColor;
+                }                
+            }
+        }
+
+        .accordion-body {
+            .accordion-inner {
+                padding: 10px 20px 20px;
+                font-size: 0.813em;
+                border-left: 2px solid lighten(@mainColor, 5%);
+            }
+        }
+    }
+}
+
+// Toggle
+// -----------------------
+.accordion.toggle {
+    .accordion-group {
+        .accordion-toggle {
+            &:after {
+                content: '\02C4';
+            }
+
+            &.collapsed:after {
+                content: '\02C5';
+            }
+        }
+    }
+}

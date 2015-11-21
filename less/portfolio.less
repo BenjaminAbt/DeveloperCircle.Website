@@ -1,0 +1,131 @@
+// ----------------------------------------
+//    Porfolios
+
+// Isotope
+// ---------------------------------------
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+// Isotope filtering
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+// --------------------------
+// Page heading
+[class^="portfolio"],
+[class*=" portfolio"] {
+
+    // --------------------------
+    // Header
+    .header-wrapper {
+        border-color: @headerBorderColorLight;
+    }
+
+    .page-heading-wrapper {
+        .at2x(@debutDark, @debutDarkWidth, @debutDarkHeight);
+    }
+}
+
+
+.project-wrapper {
+    //margin: 0 0 40px -20px;
+    margin: 0 0 20px -20px;
+    .clearfix();
+
+    .project {
+        background: #eee;
+        width: 300px;
+        height: 170px;
+        margin: 0 10px 10px;
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            @shadow: 0 0 0 #181818,
+                     0 0 5px rgba(0,0,0,.5);
+            .box-shadow(@shadow);
+            position: relative;
+            display: block;
+            .transition(all .12s ease-out);
+        }
+
+        a:hover {
+            .box-shadow(4px 4px 0 #181818);
+            top: -4px;
+            left: -4px;
+        }
+
+        .project-desc {
+            background-color: #333;
+            .opacity(0);
+            .transition(all .12s ease-in-out);
+            .transition-delay(.25s);
+        }
+
+        a:hover > .project-desc {
+            .opacity(100);
+        }
+
+        // .text-block {
+        //     position: absolute;
+        //     bottom: 0;
+        //     right: 0;
+        //     .opacity(0);
+        //     .transition(all .12s linear);
+        //     .transition-delay(.5s);
+
+        //     span {
+        //         float: right;
+        //         text-align: right;
+        //     }
+        // }
+    } // .project
+}
+
+
+// Project Grid
+// ---------------------
+.project-wrapper {
+    .project {
+        // Two columns
+        &.project2 { .make-grid(940px, 2, 218px, 20px); }
+        // Three columns
+        &.project3 { .make-grid(940px, 3, 170px, 20px); }
+    }
+}
+
+// Isotope centered
+.project-wrapper.centered {
+    margin: 0 auto 40px;
+}

@@ -1,0 +1,140 @@
+/*!
+ *  Easycons
+ *  Copyright © 2012 Vincent Bianciotto - celavi.fr
+ *  
+ *  @date 04-01-2013
+ *  @licence CC BY 3.0
+ *  @author Vincent Bianciotto
+ *  @version v0.1
+ */
+
+@fontPath: '../fonts/';
+
+@font-face {
+    font-family: 'Easycons';
+    src:url('@{fontPath}Easycons.eot');
+    src:url('@{fontPath}Easycons.eot?#iefix') format('embedded-opentype'),
+        url('@{fontPath}Easycons.svg#Easycons') format('svg'),
+        url('@{fontPath}Easycons.woff') format('woff'),
+        url('@{fontPath}Easycons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-easycons] {
+    font-family: 'Easycons';
+    content: attr(data-easycons);
+    speak: none;
+    font-weight: normal;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+}
+
+.easycons,
+[class^="easycons-"],
+[class*=" easycons-"] {
+    font-family: 'Easycons';
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+
+    &.small {
+        font-size: 0.750em;
+        line-height: 2.1em;
+        vertical-align: top;
+    }
+
+    &.medium {
+        font-size: 1.50em;
+        line-height: 2em;
+    }
+
+    &.large {
+        font-size: 2em;
+        line-height: 2em;
+    }
+}
+
+.easycons-plus:before                  { content: "\002B"; }
+.easycons-plus-rounded:before          { content: "\002C"; }
+.easycons-anti-clockwise:before        { content: "\27F2"; }
+.easycons-arrow-down:before            { content: "\02C5"; }
+.easycons-arrow-left:before            { content: "\02C2"; }
+.easycons-arrow-right:before           { content: "\02C3"; }
+.easycons-arrow-up:before              { content: "\02C4"; }
+.easycons-audio:before                 { content: "\005B"; }
+.easycons-calculator:before            { content: "\0021"; }
+.easycons-check:before                 { content: "\2713"; }
+.easycons-clockwise:before             { content: "\27F3"; }
+.easycons-code:before                  { content: "\0025"; }
+.easycons-close:before                 { content: "\0023"; }
+.easycons-close-rounded:before         { content: "\0026"; }
+.easycons-cog:before                   { content: "\0027"; }
+.easycons-cogs:before                  { content: "\0028"; }
+.easycons-headphones:before            { content: "\0048"; }
+.easycons-comments:before              { content: "\003D"; }
+.easycons-pencil:before                { content: "\0054"; }
+.easycons-earth:before                 { content: "\003F"; }
+.easycons-earth-inverted:before        { content: "\0040"; }
+.easycons-feather:before               { content: "\0042"; }
+.easycons-file-protected:before        { content: "\0043"; }
+.easycons-files:before                 { content: "\0044"; }
+.easycons-folder:before                { content: "\0045"; }
+.easycons-gallery:before               { content: "\0046"; }
+.easycons-grid:before                  { content: "\0047"; }
+.easycons-heart:before                 { content: "\2764"; }
+.easycons-heart-broken:before          { content: "\003E"; }
+.easycons-home:before                  { content: "\004A"; }
+.easycons-less:before                  { content: "\002D"; }
+.easycons-less-rounded:before          { content: "\002E"; }
+.easycons-link:before                  { content: "\004C"; }
+.easycons-lifebuoy:before              { content: "\004B"; }
+.easycons-marker:before                { content: "\004D"; }
+.easycons-mobile-nav:before            { content: "\004E"; }
+.easycons-tea:before                   { content: "\004F"; }
+.easycons-palette:before               { content: "\0050"; }
+.easycons-paused:before                { content: "\0051"; }
+.easycons-paused-squared:before        { content: "\0052"; }
+.easycons-pen:before                   { content: "\0053"; }
+.easycons-picture:before               { content: "\0055"; }
+.easycons-play:before                  { content: "\0056"; }
+.easycons-play-squared:before          { content: "\0057"; }
+.easycons-quotes:before                { content: "\0022"; }
+.easycons-sandglass:before             { content: "\0058"; }
+.easycons-share:before                 { content: "\0059"; }
+.easycons-star:before                  { content: "\002A"; }
+.easycons-star-outline:before          { content: "\0029"; }
+.easycons-stop:before                  { content: "\002F"; }
+.easycons-stop-squared:before          { content: "\0030"; }
+.easycons-tools:before                 { content: "\0034"; }
+.easycons-tag:before                   { content: "\0032"; }
+.easycons-tags:before                  { content: "\0031"; }
+.easycons-time:before                  { content: "\0033"; }
+.easycons-tv:before                    { content: "\0035"; }
+.easycons-user:before                  { content: "\0036"; }
+.easycons-user-update:before           { content: "\0037"; }
+.easycons-video:before                 { content: "\0038"; }
+.easycons-video-inverted:before        { content: "\0039"; }
+.easycons-eye:before                   { content: "\0041"; }
+.easycons-zoom:before                  { content: "\003A"; }
+.easycons-zoom-in:before               { content: "\003B"; }
+.easycons-youtube:before               { content: "\0061"; }
+.easycons-youtube-rounded:before       { content: "\0062"; }
+.easycons-vimeo:before                 { content: "\0063"; }
+.easycons-vimeo-rounded:before         { content: "\0064"; }
+.easycons-twitter:before               { content: "\0065"; }
+.easycons-twitter-rounded:before       { content: "\0066"; }
+.easycons-skype:before                 { content: "\0067"; }
+.easycons-skype-rounded:before         { content: "\0068"; }
+.easycons-pinterest:before             { content: "\0069"; }
+.easycons-pinterest-rounded:before     { content: "\006A"; }
+.easycons-facebook:before              { content: "\006B"; }
+.easycons-facebook-rounded:before      { content: "\006C"; }
+.easycons-google-plus:before           { content: "\006D"; }
+.easycons-google-plus-rounded:before   { content: "\006E"; }
+.easycons-dribbble:before              { content: "\006F"; }
+.easycons-dribbble-rounded:before      { content: "\0070"; }

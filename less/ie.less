@@ -1,0 +1,241 @@
+// ------------------------------------------------------------------------------------------------------------
+//      IE9
+
+html.lt-ie10 {
+
+    // Forms.less
+    // ---------------------
+    // Placeholder field
+    .placeholder-field {
+        label {
+            display: block;
+        }
+    }
+    
+    // Widgets.less
+    // ---------------------
+    .widget-search {
+        position: relative;
+        zoom: 1;
+
+        label,
+        .screen-reader-text {
+            font-size: 0.813em;
+            font-weight: 600;
+            font-style: italic;
+            display: block;
+        }
+    }   
+}
+
+// ------------------------------------------------------------------------------------------------------------
+//      IE8
+
+html.lt-ie9 {
+
+    body {
+        overflow-y: auto;
+    }
+
+    // Translucent background header
+    .header-wrapper {
+        background: url('../img/ie/ie-rgba-000-10.png');
+
+        &.sticky,
+        &.fixed {
+            background: url('../img/ie/ie-rgba-000-90.png');
+
+            .logo-top {
+                width: 84px; // 120 * 0.70
+                margin-top: 15px;
+            }
+        }
+    }
+
+    // Slider progress
+    .slider-progress {
+        display: none;
+    }
+
+    // Typography.less
+    // ---------------------
+    blockquote {
+        z-index: 1;
+
+        p {
+            z-index: -1;
+        }
+    }
+
+    // Layout.less
+    // ---------------------
+    // Header
+    .header-wrapper {
+        // Menu caret
+        .menu-wrapper .menu > li .sub-menu:before {
+            display: none;
+        }
+    }
+
+    // Menu
+    .menu-wrapper .menu>li .sub-menu:before {
+        display: none;
+    }
+
+    // Breadcrumb
+    .breadcrumb-wrapper .breadcrumb li a,
+    .breadcrumb-wrapper .breadcrumb li span {
+        padding: 7px 20px 0;
+
+        &:after, &:before {display: none;}
+    }
+
+    // Team1.less
+    // ---------------------
+    .team1 .teammate .desc:before {
+        display: none;
+    }
+    
+    .team1 .teammate .avatar .social li a {
+        position: relative;
+    }
+
+    .team1 .teammate .avatar .social li {
+        display: none;
+    }
+    
+    .team1 .teammate:hover > .avatar .social {
+        li {
+            display: block;
+        }
+    }
+
+    // Portfolio.less
+    // ---------------------
+    .project-wrapper .project {
+        .text-block {
+            display: none;
+        }
+
+        a:hover > .text-block {
+            display: block;
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------------------------------------
+//      IE7
+
+html.lt-ie8 {
+
+    body {
+        overflow: hidden;
+    }
+
+    // Layout.less
+    // ---------------------
+    // Fix issue with horizontal scrollbar
+    .we-are-wrapper,
+    .page-heading-wrapper {
+        overflow: hidden;
+    }
+    
+    // Second fix for horizontal scrollbar - Homepage2
+    body.homepage2 {
+        .rslides-wrapper .rslides_tabs {
+            margin: 0;
+        }
+    }    
+
+    // Fix issue keyword cropped
+    .we-are-wrapper .we-are h1 .keywords > span {
+        padding-bottom: 10px;
+    }
+
+    // Fix issue with submenu disappearing
+    .we-are-wrapper,
+    .rslides-wrapper {
+        z-index: -1;
+    }
+
+    .header-wrapper {
+        z-index: 130;
+    }
+
+    .footer-wrapper {
+        position: relative;
+        z-index: 110;
+    }
+
+    // Sidebar
+    .sidebar {
+        position: relative;
+        zoom: 1;
+    }
+
+    // Contact.less
+    // ---------------------
+    // Gmap
+    #gmap-contact {
+        min-height: 400px;
+        z-index: -1;
+    }
+
+    #gmap-contact + .container,
+    .contact-wrapper {
+        position: relative;
+        z-index: 1100;
+    }
+
+    .contact-wrapper {
+        margin-top: 20px;
+    }
+
+    // Homepage3.less
+    // ---------------------
+    .rslides-wrapper .rslides_nav {
+        background-color: @textColor;
+    }
+
+    // Team1.less
+    // ---------------------
+    .teammates .teammate.selected {
+        z-index: 10;
+    }
+
+    // Accordion.less
+    // ---------------------
+    .accordion .accordion-group .accordion-toggle {
+        zoom: 1;
+    }
+
+    // Patterns.less    
+    // ---------------------
+    // Icon rounded
+    .icon-rounded {
+        
+        // medium & default
+        [class^="easycons-"],
+        [class*=" easycons-"] {
+            margin-top: 0.750em;
+        }
+
+        &.small {
+            [class^="easycons-"],
+            [class*=" easycons-"] {
+                margin-top: 0.4em;
+
+                &.small {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &.large {
+            [class^="easycons-"],
+            [class*=" easycons-"] {
+                margin-top: 1.1em;
+            }
+        }
+    }
+}
